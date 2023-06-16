@@ -4,7 +4,11 @@ import com.ltp.gradesubmission.entity.Grade;
 
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.Optional;
+
 public interface GradeRepository extends CrudRepository<Grade, Long> {
-    Grade findByStudentId(Long studentId);
+
+    Optional<Grade> findByStudentIdAndCourseId(Long studentId, Long courseId);
+    void deleteByStudentIdAndCourseId(Long studentId, Long courseId);
 
 }
