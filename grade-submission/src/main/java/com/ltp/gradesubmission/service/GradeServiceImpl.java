@@ -60,13 +60,13 @@ public class GradeServiceImpl implements GradeService {
 
     @Override
     public void deleteGrade(Long studentId, Long courseId) {
-        /*Optional<Grade> grade = gradeRepository.findByStudentIdAndCourseId(studentId,courseId);
+        Optional<Grade> grade = gradeRepository.findByStudentIdAndCourseId(studentId,courseId);
         if (grade.isPresent()){
             Grade unwrappedGrade = grade.get();
             gradeRepository.delete(unwrappedGrade);
-        }*/
+        }
 
-        gradeRepository.deleteByStudentIdAndCourseId(studentId,courseId);
+        //gradeRepository.deleteByStudentIdAndCourseId(studentId,courseId);
     }
 
     @Override
